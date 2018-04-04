@@ -18,7 +18,7 @@ select distinct nacionalidade from gafanhotos;	//Selecione todas as nacionalidad
 select count(*) from cursos				//Conta quantos campos da tabela cursos
 where carga > 40;						//Aonde a carga é maior que 40
 
-select count(nome) from gafanhotos
+select count(nome) from gafanhotos		//
 where sexo = 'F';
 
 select max(totaulas) from cursos
