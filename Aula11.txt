@@ -1,0 +1,43 @@
+//Seleciona tudo de cursos
+select * from cursos;
+
+//Seleciona tudo de cursos e organiza em ordem alfabetica os nomes
+select * from cursos
+order by nome;
+
+//Seleciona tudo de cursos e organiza em ordem alfabetica os nomes de forma decrescente
+select * from cursos
+order by nome desc;
+
+//Seleciona nome, carga e ano da tabela cursos e organiza em ordem alfabetica os nomes
+select nome, carga, ano from cursos
+order by nome;
+
+//Seleciona ano, nome, carga da tabela cursos e organiza primeiro por ano e depois pelo nome
+select ano, nome, carga from cursos
+order by ano, nome;
+
+//Seleciona tudo de cursos
+select * from cursos
+where ano='2016'						//aonde o ano seja igual a 2016
+order by nome;							//ordena pelo nome
+		
+select * from cursos					//Seleciona tudo de cursos
+where ano <> 2015						//Aonde o ano seja DIFERENTE de 2015
+order by ano,nome;						//Ordena primeiro pelo ano e depois por nome
+
+select nome, ano from cursos			//Seleciona nome, ano da tabela cursos
+where ano between 2014 and 2016			//Aonde o ano esteja ENTRE 2014 e 2016
+order by ano desc, nome;				//Apresenta ordenado por ano decrescente e depois nome
+
+select nome, ano from cursos			//Seleciona nome e ano de cursos
+where ano in (2014, 2016)				//Aonde os anos sejam de 2014 e 2016
+order by ano;							//Ordenado pelo ano
+
+select nome, carga, totaulas from cursos		//seleciona nome, carga, totaulas de curso
+where carga > 35 and totaulas < 20;				//Aonde a carga seja MAIOR que 35 e totaulas MENOR que 20
+
+select nome, carga, totaulas from cursos		//seleciona nome, carga, totaulas de curso
+where carga > 30 or totaulas < 10;				//Aonde carga seja MAIOR que 30 E totaulas MENOR que 10
+
+

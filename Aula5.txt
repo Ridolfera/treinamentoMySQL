@@ -1,0 +1,6 @@
+INSERT INTO pessoas values		//Insere informações na tabela pessoas com os valores ((não necessita declarar os campos, caso esteja em ordem
+(default, 'Claudio', '1975-03-14', 'M', '93.7', '1.89', 'Brasil'),
+(default, 'Adalgiza', '1913-11-01', 'F', '67.2', '1.52', 'Afeganistão'),
+(default, 'Jaqueleclair', '1957-08-15', 'M', '78.9', '1.95', 'França');
+
+select * from pessoas;			//apresenta todas as informações de pessoas

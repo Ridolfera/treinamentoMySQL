@@ -1,0 +1,36 @@
+Na aula 1 vimos a história do banco de dados.
+
+º Tipos de dados:
+
+3 Arquivos
+	2 Tabelas
+		1 Registros
+
+
+º Tipos de armazenamentos:
+- Arquivos sequenciais
+- Arquivos de Acesso direto
+
+
+Na década de 60 o governo do EUA organizou o CODASYL, um encontro entre Governo, Empresas e Universidades, surgindo o COBOL primeira linguagem de programação.
+
+Os banco de dados são separados em 4 partes
+º Base de dados
+	Os dados a serem armagenados
+º Sistema gerenciador (SGBD - DMS) 
+	hh
+º Linguagem de exploração
+	Linguagem de acesso ao dado, primeiramente priorizando uma única linguagem
+SEQUEL -> SQL Structured Query Language
+º Programas adicionais
+
+Dados hierarquicos:
+	Modelo criado pela IBM aonde
+
+Modelo de redes:
+Seriam ligados em forma de redes, aonde não possuiam alguém acima
+
+	*** Modelo relacional ***
+Criado na década de 70, modelo bastante utilizado até hoje os dados são armazenados de forma intrinseca, aonde não são em redes, nem possuem hierarquia.
+Nesse modelo, posso ter controle de clientes, vendas, estoque e fornecedores de maneira interligada, tendo a opção de gerenciar o estoque de acordo com as compras de seus clientes e consultando entregas do fornecedor.
+

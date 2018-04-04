@@ -1,0 +1,26 @@
+Como criar seu backup (também conhecido como DUMP)
+
+	Menu Server
+		Selecione a opção Data Export
+		
+	Quando abrir uma janela, você deverá selecionar o seu banco de dados no campo da esquerda
+	e suas tabelas no campo da direita.
+	
+	Abaixo você tem a opção de escolher um único arquivo (recomendado) ou backup em pasta.
+	
+	Lembre-se sempre de selecionar a opção "Include create schema", nela você faz a criação do banco na hora de importar o base.
+	
+	
+******************** Importando sua base de dados
+Para recuperar seu backup, você deveria ir em:
+
+	Menu Server
+		Selecionar a opção Data Import
+		
+	Na janela que abriu você selecionar o container ou o arquivo único, depende de como você gerou seu backup
+	
+	Clicando nos ... 3 pontinhos você irá selecionar o arquivo gerado no backup.
+	
+	Caso queira você pode selecionar os bancos e as tabelas na caixa abaixo, senão só executar o backup em "Start Import"
+	
+	

@@ -1,0 +1,17 @@
+Instruções
+Definição
+	Define a estrutura do banco
+Manipulação
+	Manipulação de dados no banco
+Solicitações
+	Ex: select
+Controle 
+	Controle de acesso
+Transações
+	Garante que a solicitação será atendida da melhor maneira possível 
+Caracteristicas de uma boa transação
+Durabilidade - Tem que permanecer da maneira que ele foi criado
+Isolamento - Todas solicitações feitas devem ser atendidades, mesmo que simultâneas
+Consistência - Trata a consistência do banco, sempre OK
+Atomicidade - Atomicidade dos dados, ou tudo funciona ou ele retorna a um estado OK.
+

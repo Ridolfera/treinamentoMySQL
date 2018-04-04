@@ -1,0 +1,36 @@
+
+select * from cursos		//Apresenta todas as informações de cursos
+where nome like 'P%';		//Aonde o nome começe com P e tenha alguma informação ou vazio após ele
+
+select * from cursos		//Apresenta todas as informações de cursos
+where nome like '%a';		//Aonde o nome termine com A e tenha alguma informação ou vazio antes dele
+
+select * from cursos		//Apresenta todas as informações de cursos
+where nome not like '%P%';	//Aonde o nome não possua P em nenhuma posição
+
+select * from cursos
+where nome like 'PH%P_';
+
+// Distinct serve para apresentar todas as informações
+// diferentes de um campo, não conta a quantidade de vezes que o campo se repetiu
+select distinct nacionalidade from gafanhotos;	//Selecione todas as nacionalidades da tabela gafanhotos
+
+select count(*) from cursos				//Conta quantos campos da tabela cursos
+where carga > 40;						//Aonde a carga é maior que 40
+
+select count(nome) from gafanhotos
+where sexo = 'F';
+
+select max(totaulas) from cursos
+where ano = '2016';
+
+select nome,min(totaulas) from cursos
+where ano = '2014';
+
+select sum(totaulas) from cursos
+where ano = '2016';
+
+select avg(totaulas) from cursos
+where ano = '2014';
+
+

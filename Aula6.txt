@@ -1,0 +1,42 @@
+			
+alter table pessoas						//Altera a coluna profissao
+add column profissao varChar(10);
+
+alter table pessoas						//Apaga a coluna profissao
+drop column profissao;
+
+alter table pessoas
+add column profissao varChar(10) after nome;
+
+alter table pessoas						//Adiciona a coluna codigo na primeira posição da tabela
+add codigo int FIRST;					//Não necessita o campo "column" para adicionar 
+
+alter table pessoas						//modifica (ou acrescenta) as caracteristicas da coluna 
+modify column profissao varChar(20) NOT NULL default ' ';
+
+alter table pessoas						//modifica (ou acrescenta) as caracteristicas da coluna e troca seu nome
+change column profissao prof varChar(20) NOT NULL default ' ';
+
+alter table pessoas						//Altera o nome da tabela pessoas para gafanhotos
+rename to gafanhotos;
+
+create table if not exists cursos(
+	nome varChar(30) NOT NULL UNIQUE, 	
+    descricao text,
+    carga int UNSIGNED,					//Unsigned não permite um número negativo
+    totaulas int UNSIGNED,				//Unsigned não permite um número negativo
+    ano year default '2018'
+	
+) default charset = utf8;
+
+alter table cursos						//altera a tabela cursos
+add column idcurso int first;			//adicionando uma coluna IDCURSO na primeira posição da tabela
+
+alter table cursos						//Adiciona primary key em idcurso
+add primary key (idcurso);				//É necessario primeiro adicionar a coluna e depois parametrizar a primary key
+
+drop table if exists alunos;			//Exclui a tabela alunos caso ela exista
+
+desc cursos
+
+select * from pessoas

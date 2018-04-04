@@ -1,0 +1,23 @@
+create database Cadastro;		//Cria o banco de dados Cadastro
+
+use cadastro;					//Usa o banco de dados Cadastro
+
+create table pessoas(			//Cria a tabela pessoas
+
+    nome varChar(30),			//Cria campo Nome do tipo varChar de 30 posições
+
+    idade tinyInt(3),			//Cria campo Idade do tipo tinyInt de 3 posições
+
+    sexo char(1),				//Cria campo Sexo do tipo Char de 01 posições
+
+    peso float,					//Cria campo Peso do tipo float ((Não preciso indicar o número de posições))
+ 
+    altura float,				//Cria campo Altura do tipo float ((Não preciso indicar o número de posições))
+
+    nacionalidade varChar(20)	//Cria campo Nacionalidade do tipo varChar de 30 posições
+
+
+);
+
+describe pessoas;				//Mostra a estrutura da tabela pessoas
+desc pessoas; 					//Mesma coisa que describe
