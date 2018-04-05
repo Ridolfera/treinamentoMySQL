@@ -1,0 +1,44 @@
+describe gafanhotos;									//descreve a tabela gafanhotos
+
+alter table gafanhotos									//altera a tabela gafanhotos
+add column cursopreferido int;							//adicionando uma coluna com o nome cursopreferido da classe int
+
+alter table gafanhotos									//altera a tabela gafanhotos
+add foreign key (cursopreferido)						//adiciona uma chave estrangeira no coluna cursopreferido
+references cursos(idcurso);								//referencia que a chave estrangeira vem da tabela cursos no coluna idcurso
+
+update gafanhotos set cursopreferido = '9'				//Atualiza o coluna cursopreferido da tabela gafanhotos
+where id = '1';											//Aonde id do gafanhoto é igual a 1
+
+select * from gafanhotos;								//Seleciona tudo de gafanhotos
+
+select nome, cursopreferido from gafanhotos;			//Selecione nome, cursopreferido da tabela gafanhotos
+
+//Essa tabela apresenta o nome do gafanhoto, o ID do seu curso preferido, o nome do curso e o ano do curso
+select gafanhotos.nome, gafanhotos.cursopreferido,		//Seleciona nome e cursopreferido da tabela gafanhotos
+cursos.nome, cursos.ano									//Seleciona  nome e ano da tabela cursos
+from gafanhotos join cursos								//Junte as tabelas cursos e gafanhotos			
+on cursos.idcurso = gafanhotos.cursopreferido;			//Aonde idcurso da tabela cursos é igual cursopreferido da tabela gafanhotos
+
+//Essa tabela mostra o nome do gafanhoto, o nome do curso e o ano do curso
+//Esse comando on serve para ao invés de apresentar o número do curso, apresentar o nome do curso
+select g.nome, c.nome, c.ano							//Seleciona nome da tabela gafanhoto e nome e ano da tabela cursos
+from gafanhotos as g inner join cursos as c				//Da tabela gafanhotos com atalho para G junte com a tabela cursos com atalho para C
+on c.idcurso = g.cursopreferido							//Aonde idcurso da tabela cursos é igual a coluna cursopreferido da tabela gafanhotos
+order by g.nome;										//Ordene pela coluna nome da tabela gafanhotos
+
+//Essa tabela mostra o nome dos gafanhotos, o nome dos cursos e o ano do curso
+//o comando left vai dar preferencia para a tabela gafanhotos, aonde vai apresentar gafanhotos que não selecionaram nenhum curso
+//o comando outer apresenta também os campos que não possuem dados (campos nulos)
+select g.nome, c.nome, c.ano							//selecione as colunas nome da tabela gafanhotos, nome e ano da tabela cursos
+from gafanhotos as g left outer join cursos as c		//Da tabela gafanhotos como g juntando a tabela cursos como c dando preferência a esquerda (tabela gafanhotos)
+on c.idcurso = g.cursopreferido							//Aonde idcurso da tabela cursos é igual a cursopreferido da tabela gafanhotos
+order by g.nome;										//ordenado pela coluna nome da tabela gafanhotos
+
+//Essa tabela mostra o nome dos gafanhotos, o nome dos cursos e o ano do curso
+//o comando right vai dar preferencia para a tabela cursos, aonde vai apresentar cursos que não foram selecionaram por gafanhoto nenhum
+//o comando outer apresenta também os campos que não possuem dados (campos nulos)
+select g.nome, c.nome, c.ano							//selecione as colunas nome da tabela gafanhotos, nome e ano da tabela cursos
+from gafanhotos as g right outer join cursos as c		//Da tabela gafanhotos como g juntando a tabela cursos como c dando preferência a direita (tabela cursos)
+on c.idcurso = g.cursopreferido							//Aonde idcurso da tabela cursos é igual a cursopreferido da tabela gafanhotos
+order by g.nome;										//ordenado pela coluna nome da tabela gafanhotos

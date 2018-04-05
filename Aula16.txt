@@ -1,0 +1,30 @@
+
+create table gassistec(										//cria a tabela gassistec
+id int not null auto_increment,
+data date,
+idgafanhotos int,
+idcursos int,
+primary key (id),											//Declara ID como chave primária
+foreign key (idgafanhotos) references gafanhotos(id),		//Cria uma chave estrangeira entre idgafanhotos e id da tabela gafanhotos
+foreign key (idcursos) references cursos(idcurso)			//Cria uma chave estrangeira entre idcursos e idcurso da tabela cursos
+) default charset = utf8;
+
+insert into gassistec values(								//Insere na tabela gassistec os valores
+default, '2014-03-01', '1', '2');							//Default para a chave primaria, ano para data, 1 para ID gafanhotos e 2 para ID Cursos
+
+select * from gassistec;									//seleciona tudo de gassistec
+
+select * from gafanhotos g									//Seleciona tudo de gafanhotos e seta um atalho G para a tabela gafanhotos
+join gassistec a											//Faz uma ligação gassistec e seta um atalho A para a tabela gassistec
+on g.id = a.idgafanhotos;									//Informa que ID da tabela Gafanhotos é igual a idgafanhotos da tabela gassistec
+
+select g.id, g.nome, a.idgafanhotos, idcursos				//Seleciona ID de gafanhotos, idgafanhotos de gassistec, e idcursos de gafanhotos setando atalho G
+from gafanhotos g											
+join gassistec a											//Faz uma ligação gassistec e seta um atalho A para a tabela gassistec
+on g.id = a.idgafanhotos;									//Informa que ID da tabela Gafanhotos é igual a idgafanhotos da tabela gassistec
+
+select g.nome, c.nome from gafanhotos g						//Seleciona nome da tabela gafanhotos, nome da tabela cursos e seta atalho G para tabela gafanhotos
+join gassistec a											//Faz uma ligação gassistec e seta um atalho A para a tabela gassistec
+on g.id = a.idgafanhotos									//Informa que ID da tabela Gafanhotos é igual a idgafanhotos da tabela gassistec
+join cursos c												//Faz mais uma ligação incluíndo tabela cursos com atalho C
+on c.idcurso = a.idcursos ;									//Informa que idcurso da tabela cursos é igual a idcurso da tabela gassistec
