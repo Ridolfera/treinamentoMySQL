@@ -1,8 +1,10 @@
 			
-alter table pessoas						//Altera a coluna profissao
+//Altera a coluna profissao
+alter table pessoas						
 add column profissao varChar(10);
 
-alter table pessoas						//Apaga a coluna profissao
+//Apaga a coluna profissao
+alter table pessoas						
 drop column profissao;
 
 alter table pessoas

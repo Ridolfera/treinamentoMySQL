@@ -34,3 +34,5 @@ Seriam ligados em forma de redes, aonde não possuiam alguém acima
 Criado na década de 70, modelo bastante utilizado até hoje os dados são armazenados de forma intrinseca, aonde não são em redes, nem possuem hierarquia.
 Nesse modelo, posso ter controle de clientes, vendas, estoque e fornecedores de maneira interligada, tendo a opção de gerenciar o estoque de acordo com as compras de seus clientes e consultando entregas do fornecedor.
 
+
+teste
